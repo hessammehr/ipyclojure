@@ -1,0 +1,12 @@
+(ns ipyclojure.core
+  (:require [clojure.data.json :as json])
+  (:gen-class))
+
+(defn -main
+  "I don't do a whole lot ... yet."
+  [& args]
+  (println (slurp (first args))))
+
+
+(def *json-file* "/home/hessammehr/.ipython/profile_iclojure/security/kernel-9473.json")
+(json/read-str (slurp *json-file*))
